@@ -3,8 +3,8 @@ import './App.css'
 import HomePage from './components/Home/HomePage';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
-import Products from './Products';
-import Contact from './components/Contact/Contact';
+import Products from './appProducts';
+import Contact from './appContact';
 
 import {
   BrowserRouter as Router,

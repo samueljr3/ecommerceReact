@@ -1,0 +1,101 @@
+{
+    "RAM":[
+        {
+            "numID": 0,
+            "name":"CORSAIR Vengaence 16 GB",
+            "price": 64.99,
+            "image":"./images/rams/vengeance16gb.png",
+            "desc":"Blazing fast RAM by CORSAIR is sure to be powerful for majority of needs."
+        },
+        {
+            "numID": 1,
+            "name":"G.SKILL Trident Z RGB",
+            "price": 87.99,
+            "image":"./images/rams/gskillRGB.png",
+            "desc":"Combining striking LED lighting with awesome performance, the TridentZ RGB is a great choice for building a modern powerhouse."
+        },
+        {
+            "numID": 2,
+            "name":"CORSAIR Vengeance RGB Pro 32GB",
+            "price": 128.98,
+            "image":"./images/rams/vengRGB.png",
+            "desc":"Blazing fast RAM by CORSAIR this time in RGB for maximum aesthetic."
+        },
+        {
+            "numID": 3,
+            "name":"G.SKILL Ripjaws V Series 64GB",
+            "price": 274.99,
+            "image":"./images/rams/ripjaw.png",
+            "desc":"Great for a complete overkill build. 64GB is sure to tackle any problem."
+            
+        }
+    ],
+    "Motherboards":[
+        {
+            "numID": 4,
+            "name":"ASUS TUF GAMING B550M",
+            "price": 206.99,
+            "image":"./images/mobo/asusTUF.png",
+            "desc":"This motherboard is AMD AM4 ready. Your Ryzen 5000 series CPUs, be blazing fast."
+            
+        },
+        {
+            "numID": 5,
+            "name":"GIGABYTE X570 AORUS",
+            "price": 225.89,
+            "image":"./images/mobo/gigabyteX570.png",
+            "desc":"X570 AORUS motherboards provide an all next-generation network and storage to keep you up to speed."
+            
+        },
+        {
+            "numID": 6,
+            "name":"MSI MAG B550 TOMAHAWK",
+            "price": 187.99,
+            "image":"./images/mobo/msiTOHAHAWK.png",
+            "desc":"Well known for reliable and essential equipment, MSI introduces its well priced AM4 motherboard."
+            
+        },
+        {
+            "numID": 7,
+            "name":"GIGABYTE Z690 AORUS MASTER",
+            "price": 469.99,
+            "image":"./images/mobo/gigabyteZ690.png",
+            "desc":"GIGABYTE brings us a beefy motherboard ready for the latest and most powerful INTEL CPUs."
+            
+        }
+    ],
+    "GraphicsCards":[
+        {
+            "numID": 8,
+            "name":"GIGABYTE AORUS RTX 3070",
+            "price": 859.99,
+            "image":"./images/vengeance16gb.png",
+            "desc":"Featuring a 3 fan design, GIGABYTE brings us the high end 3070 with chilling temps."
+            
+        },
+        {
+            "numID": 9,
+            "name":"MSI Gaming GTX 1050 Ti",
+            "price": 338.99,
+            "image":"./images/vengeance16gb.png",
+            "desc":"MSI brings us the budget 1050 Ti for those wanting to enter the hobby."
+            
+        },
+        {
+            "numID": 10,
+            "name":"Sapphire Radeon RX 6600",
+            "price": 709.67,
+            "image":"./images/vengeance16gb.png",
+            "desc":"AMD finest graphics card alongside Sapphire's low noise coolers."
+            
+        },
+        {
+            "numID": 11,
+            "name":"SAPPHIRE Radeon RX 6900 XT",
+            "price": 1899.99,
+            "image":"./images/vengeance16gb.png",
+            "desc":"Great for a complete overkill build. 64GB is sure to tackle any problem."
+            
+        }
+    ]
+}
