@@ -16,9 +16,8 @@ class App extends React.Component{
 
   render(){
     return(
-      <div className="App">
+      <body>
        <Router>
-         <body>
           <Navbar />
           <Routes>
             <Route index element={<HomePage/>}/>
@@ -26,10 +25,9 @@ class App extends React.Component{
             <Route path="/contact" element ={<Contact/>} />
           </Routes>
           <Footer/>
-         </body>
        </Router>
 
-      </div>
+      </body>
     )
   };
 };

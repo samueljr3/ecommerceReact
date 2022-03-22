@@ -1,3 +1,5 @@
+
+@import "react-slideshow-image/dist/styles.css";
 *{
   margin: 0;
   padding: 0;
@@ -131,7 +133,7 @@ footer ul li a:hover {
   position: relative;
   height: 80vh;
   overflow: hidden;
-  /* background-image: url(hero2.gif) no-repeat center; */
+  background: no-repeat center;
   background-size: cover;
 }
 
@@ -151,11 +153,13 @@ footer ul li a:hover {
 
 /*Index Main*/
 
+
 .sale-background{
   background-color: #003049;
   color: #FDF0D5;
   border-radius: 20px;
   height:100%;
+  width: 400px;
 }
 .sale-background figcaption{
   padding-bottom: 1rem;
@@ -163,14 +167,15 @@ footer ul li a:hover {
 }
 
 .sale-background p{
+  margin-top: 1em;
   padding-bottom: 3rem;
+  font-size: 2em;
 }
 
 .index-main{
   margin-top: 2rem;
   margin-bottom: 3rem;
   display: grid;
-  grid-template-columns: repeat(3,1fr);
   text-align: center;
 }
 .index-main img{
@@ -187,6 +192,18 @@ footer ul li a:hover {
   font-size: 1.5em;
 }
 
+/* Slide animation */
+.each-slide > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+}
+
+
 /*----------------------------------------------CONTACT US START HERE--------------------------------------*/
 
 .contact-main{
@@ -199,20 +216,20 @@ footer ul li a:hover {
 .contact-container{
   width: 85%;
   max-width: 600px;
-  background: rgb(253,240,213, .9);
+  background: rgb(96, 0, 128, .9);
   position: absolute;
   top:50%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 30px 40px;
-  
   border-radius: 8px;
   text-align: center;
   box-shadow: 0 0 20px #000000b3;
 }
 
 .contact-container h1{
-  margin-top: 0;   
+  margin-top: 0; 
+  color: white;  
 }
 
 .contact-input{
@@ -257,15 +274,15 @@ footer ul li a:hover {
 /*----------------------------------------------PRODUCTS START HERE--------------------------------------*/
 
 
-/* .hero-products{
+.hero-products{
   position: relative;
   height: 60vh;
   overflow: hidden;
-  background: url(images/hero3.jpeg) no-repeat center;
+  background: no-repeat center;
   background-size: cover;
-} */
+}
 
-/* .hero-products h1{
+.hero-products h1{
   position: absolute;
   text-shadow: 2px 2px 5px black;
   top:50%;
@@ -276,7 +293,7 @@ footer ul li a:hover {
   color: white;
   font-size: 5rem;
   text-transform: uppercase;
-} */
+}
 
 #product-main{
   margin-bottom: 2em;
@@ -321,4 +338,106 @@ footer ul li a:hover {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+
+@media screen and (min-width: 1024px){
+  .index-main{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 1024px){
+  
+  .sale-background{
+    width: 300px;
+  }
+}
+
+@media (max-width: 800px){
+  nav a{
+      font-size:20px;
+  }
+
+  footer .copyright {
+      font-size: 1em;
+  }
+  i{
+      font-size: 2.5em;
+      padding: 0 .5em 0 .5em;
+  }
+
+  /*---Home page CSS-----*/
+  .index-main{
+    width:100%;
+    grid-template-rows: 600px 650px 600px;
+  }
+  
+  .index-main aside {
+      padding: 0 0.5rem 0 0.5rem;
+      margin: 0 auto 0 auto;
+  }
+
+  .index-main img{
+      width:48%;
+      margin-bottom: 3rem;
+  }
+
+  #index-bio{
+    padding: 0 1.5em;
+  }
+  .index-main article h2{
+    margin-top: 2em;
+  }
+  .sale-background{
+    width: 350px;
+  }
+
+  
+  /*-------Product CSS------*/
+  .product-grid{
+      grid-template-columns: repeat(1, 1fr);
+  }
+  .product-grid .product-card{
+    margin: 2em auto;
+  }
+  .product-grid figcaption{
+      font-size: 1.5em;
+  }
+  .product-grid p{
+      font-size: 1.3em;
+  }
+  .product-button{
+      width:60%;
+      height:3em;
+      font-size: 1.2em;
+  }
+
+  /*------Contact CSS------*/
+  .contact-container{
+      top:60%;
+      left: 50%;
+      padding: 60px 40px 45px 40px;
+  }
+
+  .contact-input{
+      border: 1px solid grey;
+      margin: 8px 0;
+      padding: 12px 18px;
+      border-radius: 8px;
+      background: white;
+  }
+  .contact-button{
+      margin-top: 2em;
+      height:5em;
+  }
+}
+@media (max-width: 425px){
+  nav li {
+    margin-left: 7px;
+  }
+}
+@media (max-width: 375px){
+  .sale-background{
+    width:300px;
+  }
 }

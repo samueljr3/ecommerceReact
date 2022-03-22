@@ -8,7 +8,7 @@ const contactStyle = {
 const Contact = () => {
   return (
     <main className="contact-main" style={contactStyle}>
-        <section class="contact-container">
+        <section className="contact-container">
             <h1>Contact Us</h1>
             <div className="contact-input">
                 <label>Full Name :</label>
