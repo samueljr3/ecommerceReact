@@ -1,6 +1,8 @@
 import React from "react";
 import productList from "./components/Products/products.json";
 import HeroImg from "./components/Products/hero3.jpeg";
+import RAMList from "./components/Products/getRAM";
+import MOBOList from "./components/Products/getMOBO";
 
 const productStyle = {
   backgroundImage: `url(${HeroImg})`,
@@ -10,7 +12,10 @@ const ramList = productList.RAM;
 const moboList = productList.Motherboards;
 const gpuList = productList.GraphicsCards;
 
-const Products = () => {
+class Products extends React.Component{  
+  
+
+  render(){
   return (
     <main id="product-main">
       <section className="hero-products" style={productStyle}>
@@ -18,20 +23,7 @@ const Products = () => {
       </section>
       <h2 className="product-title">RAM</h2>
       <div className="product-grid">
-        {ramList.map((card) => {
-          return (
-            <div className="product-card">
-              <figure>
-                <img src={card.image} alt={card.name} />
-                <figcaption>
-                  {card.name} - ${card.price}
-                </figcaption>
-              </figure>
-              <p>{card.desc}</p>
-              <button className="product-button">Buy Now</button>
-            </div>
-          );
-        })}
+        <RAMList/>
       </div>
       <h2 className="product-title">Motherboards</h2>
       <div className="product-grid">
@@ -69,6 +61,7 @@ const Products = () => {
       </div>
     </main>
   );
+      }
 };
 
 export default Products;
