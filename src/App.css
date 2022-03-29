@@ -340,6 +340,18 @@ footer ul li a:hover {
   cursor: pointer;
 }
 
+.filter{
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1rem;
+  margin: 1rem;
+  border-bottom: 0.1rem black solid;
+}
+
+.filter div{
+  flex: 1;
+}
+
 @media screen and (min-width: 1024px){
   .index-main{
     grid-template-columns: repeat(3, 1fr);

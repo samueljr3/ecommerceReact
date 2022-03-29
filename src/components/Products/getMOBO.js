@@ -8,7 +8,6 @@ export default class MOBOList extends React.Component{
 
     componentDidMount(){
         axios.get("http://localhost:4000/api/Motherboards").then(res =>{
-            console.log(res);
             this.setState({moboData: res.data});
         });
     }

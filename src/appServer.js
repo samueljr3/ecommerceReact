@@ -52,6 +52,16 @@ app.get('/api/GPU', (req, res) => {
     })
 });
 
+app.get('/api/Products', (req, res) => {
+    db.query('SELECT * FROM ProductList', (err, result) => {
+        if (err) {
+            console.log(err)
+        }else {
+            res.send(result);
+        }
+    })
+});
+
 app.listen(4000, () => {
     console.log(`Console server listening on port 4000.`)
 });
