@@ -8,8 +8,8 @@ export default class ProductList extends React.Component{
     };
     
     componentDidMount(){
-        axios.get("http://localhost:4000/api/Products").then(res =>{
-            
+        axios.get("/api/Products").then(res =>{
+            //when deploying change url to '/api/Products' 
             this.setState({productData: res.data});
         });
     }

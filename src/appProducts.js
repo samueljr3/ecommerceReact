@@ -1,10 +1,7 @@
 import React from "react";
 //import productList from "./components/Products/products.json";
 import HeroImg from "./components/Products/hero3.jpeg";
-// import RAMList from "./components/Products/getRAM";
-// import MOBOList from "./components/Products/getMOBO";
-// import GPUList from "./components/Products/getGPU";
-// import Filter from "./components/Products/Filter";
+
 import ProductList from "./components/Products/getProducts";
 
 const productStyle = {
