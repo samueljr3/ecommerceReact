@@ -1,31 +1,25 @@
+const path = require('path')
 const express = require('express');
 const cors = require('cors');
 const mysql = require('mysql');
-const path = require('path');
 const app = express();
 
-const db = mysql.createConnection({
-    host: 'us-cdbr-east-05.cleardb.net' ||'localhost',
-    user: 'b6858b1f59d75e' || 'root',
-    password: '307e9a35' || 'road2hire',
-    database: 'heroku_b765ac72934f555' || 'sugoi_products'
-});
 
-db.connect(err => {
-    if(err) {
-        return err;
-    } else {
-        console.log("db connection successful!")
-    }
-});
+let connection;
+
+const db_config = {
+    host: 'us-cdbr-east-05.cleardb.net',
+    user: 'b6858b1f59d75e',
+    password: '307e9a35',
+    database: 'heroku_b765ac72934f555' 
+};
 
 app.use(cors());
 app.use(express.json());
 
-
-
-app.get('/api/Products', (req, res) => {
-    db.query('SELECT * FROM ProductList', (err, result) => {
+app.get('/api/products', (req, res) => {
+    if (!connection) res.send([]);
+    connection.query('SELECT * FROM ProductList', (err, result) => {
         if (err) {
             console.log(err)
         }else {
@@ -33,7 +27,33 @@ app.get('/api/Products', (req, res) => {
         }
     })
 });
+
 app.use(express.static(path.join(__dirname, './build')));
-app.listen(process.env.PORT || 4000, () => {
-    console.log(`Console server listening on port 4000.`)
+app.use((req, res, next) => {
+    res.sendFile(path.join(__dirname, './build', 'index.html'))
+})
+
+app.listen(process.env.PORT || 4000, function(){
+    console.log(`Express is working on port 4000`)
 });
+
+function handleDisconnect() {
+    connection = mysql.createConnection(db_config); 
+  
+    connection.connect(function(err) {              
+      if(err) {                                    
+        console.log('error when connecting to db:', err);
+        setTimeout(handleDisconnect, 2000); 
+      }                                     
+    });                                     
+                                            
+    connection.on('error', function(err) {
+      console.log('db error', err);
+      if(err.code === 'PROTOCOL_CONNECTION_LOST') { 
+        handleDisconnect();                         
+      } else {                                      
+        throw err;                                  
+      }
+    });
+  }
+handleDisconnect();

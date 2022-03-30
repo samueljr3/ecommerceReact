@@ -342,15 +342,23 @@ footer ul li a:hover {
 
 .filter{
   display: flex;
-  justify-content: space-evenly;
+  /* justify-content: space-around; */
   padding: 1rem;
-  margin: 1rem;
+  margin: .5rem;
   border-bottom: 0.1rem black solid;
 }
 
-.filter div{
-  flex: 1;
+.filter p{
+  margin-right: .5em;
 }
+
+.filter button{
+  margin: 0 1em;
+  padding:0 .5em;
+}
+/* .filter div{
+  flex: 1;
+} */
 
 @media screen and (min-width: 1024px){
   .index-main{
