@@ -1,7 +1,6 @@
 import React from 'react'
 import HeroImg from './hero2.gif'
 import Slideshow from './slideshow';
-//rnfe
 
 const heroStyle = {
   backgroundImage:`url(${HeroImg})`

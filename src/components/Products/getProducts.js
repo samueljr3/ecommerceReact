@@ -6,10 +6,11 @@ export default class ProductList extends React.Component {
     originalProductData: [],
     productData: [],
     type: "Reset",
+
   };
 
-  async componentDidMount() {
-    await axios.get("/api/Products").then((res) => {
+   componentDidMount() {
+    axios.get("/api/products").then((res) => {
       //when deploying change url to '/api/Products'
       this.setState({ productData: res.data, originalProductData: res.data });
       //if heroku dies type 'heroku restart' in terminal
@@ -17,29 +18,19 @@ export default class ProductList extends React.Component {
   }
 
   productFilter(type) {
-    if (this.originalProductData != null) {
-      return () => {
-        this.setState({ type, productData: this.originalProductData });
-      };
-    }
+    // if (this.originalProductData != null) {
+    //   return () => {
+    //     this.setState({ type, productData: this.originalProductData });
+    //   };
+    // }
     return () => {
       this.setState({ type });
     };
   }
 
-  handleChangeBrodda(e) {
-    console.log(e.target.value);
-    console.log("holi");
-    let filteredProducts = this.state.productData.filter(
-      (product) => 100 > product.price
-    );
-    this.setState({ productData: filteredProducts });
-  }
-
   render() {
     return (
       <>
-      
         <div className="filter">
           <p>Sort by type: </p>
           <button onClick={this.productFilter("RAM")}>RAM</button>
@@ -49,12 +40,10 @@ export default class ProductList extends React.Component {
         </div>
         <div className="filter">
           <p>Sort by price: </p>
-          {/* <button onClick= {this.productFilter()}>bruh</button> */}
-          <button onClick={this.productFilter(500)}>{`$500 <`}</button>
-          <button onClick={this.productFilter(400)}>{`$400 >`}</button>
-          <button onClick={this.productFilter(300)}>{`$300 >`}</button>
           <button onClick={this.productFilter(200)}>{`$200 >`}</button>
-          <button onClick={this.productFilter(100)}>{`$100 >`}</button>
+          <button onClick={this.productFilter(300)}>{`$300 >`}</button>
+          <button onClick={this.productFilter(400)}>{`$400 >`}</button>
+          <button onClick={this.productFilter(500)}>{`$500 <`}</button>
         </div>
         <h2 className="product-title">Our Products</h2>
         <div className="product-grid">

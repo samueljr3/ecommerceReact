@@ -7,8 +7,9 @@ import {
 const Navbar = () => {
   return (
      <header>
+        <Link to="/"><img className="logo" src="./images/logo.png" alt="logo"/></Link>
         <div className ="navContainer">
-        <img className="logo" src="./images/logo.png" alt="logo"/>
+         
             <nav>
                 <ul>
                     <li><Link to="/">Home</Link></li>

@@ -6,9 +6,6 @@ const contactStyle = {
 };
 
 const Contact = () => {
-  const bruh = () => {
-    console.log("dudes be like");
-  };
   
   return (
     <main className="contact-main" style={contactStyle}>
@@ -39,7 +36,7 @@ const Contact = () => {
                     Message: <textarea></textarea>
                 </label>
             </div>
-            <button className="contact-button" onClick={bruh}>
+            <button className="contact-button">
             Submit
             </button>
         </form>
